@@ -1,37 +1,48 @@
-## Welcome to GitHub Pages
+# zz-zzBlog
+zz@zz的博客
+<br>
+<h1>1.如何理解和熟练运用js中的call及apply？</h1>
+本身不难理解，看下MDN就知道了，但是不常用，遇到了，还要脑回路回转下。或者时间长了，还是要确定下去看下文档，<br>
+为了方便记忆：<br>
+  猫吃鱼，狗吃肉，奥特曼打小怪兽。<br>
+  有天狗想吃鱼了<br>
+  猫.吃鱼.call(狗，鱼)<br>
+  狗就吃到鱼了<br>
+  猫成精了，想打怪兽<br>
+  奥特曼.打小怪兽.call(猫，小怪兽)<br>
+  就这样记住了。<br>
+作者：寇云
+链接：https://www.zhihu.com/question/20289071/answer/258643285
+来源：知乎
+<br>
 
-You can use the [editor on GitHub](https://github.com/anshuye1/zz-zzBlog/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+<div>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  function Animal(){
+    this.name = "Animal";
+    this.showName = function(){
+        alert(this.name);
+    }
+  } 
 
-### Markdown
+  function Cat(){
+      this.name = "Cat";    
+  }
+  
+  var animal = new Animal();
+  
+  var cat = new Cat();
+ 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+  //通过call或apply方法，将原本属于Animal对象的showName()方法交给对象cat来使用了。
+  
+  //输入结果为"Cat" 
+  
+  animal.showName.call(cat,",");
+  
+  //animal.showName.apply(cat,[]); 
+  
+</div>
+call和apply，这两个方法基本上是一个意思，区别在于 call 的第二个参数可以是任意类型，而apply的第二个参数必须是数组，也可以是arguments
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/anshuye1/zz-zzBlog/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
