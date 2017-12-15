@@ -44,5 +44,6 @@ zz@zz的博客
   animal.showName.call(cat,",");    
   //animal.showName.apply(cat,[]);  
 </code>
+
 call和apply，这两个方法基本上是一个意思，区别在于 call 的第二个参数可以是任意类型，而apply的第二个参数必须是数组，也可以是arguments
 <h1></h1>
