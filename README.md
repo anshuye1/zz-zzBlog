@@ -16,34 +16,23 @@ zz@zz的博客
 来源：知乎
 
 <code>
-  
-  function Animal(){
-  
-    this.name = "Animal";  
-    
-    this.showName = function(){    
-    
-        alert(this.name);  
-        
-    }    
-    
-  }    
+  function Animal(){<br> 
+    this.name = "Animal";  <br> 
+    this.showName = function(){    <br> 
+        alert(this.name); <br>    
+    }    <br>  
+  }    <br> 
 
-  function Cat(){    
-  
-      this.name = "Cat"; 
-      
-  }    
+  function Cat(){    <br> 
+      this.name = "Cat"; <br> 
+  }    <br> 
+  var animal = new Animal();<br>    
+  var cat = new Cat();  <br>   
 
-  var animal = new Animal();   
-  
-  var cat = new Cat();    
-
-  //通过call或apply方法，将原本属于Animal对象的showName()方法交给对象cat来使用了。    
-  //输入结果为"Cat"    
-  animal.showName.call(cat,",");    
-  //animal.showName.apply(cat,[]);  
+  //通过call或apply方法，将原本属于Animal对象的showName()方法交给对象cat来使用了。<br>    
+  //输入结果为"Cat" <br>    
+  animal.showName.call(cat,",");   <br>  
+  //animal.showName.apply(cat,[]);  <br> 
 </code>
-
 call和apply，这两个方法基本上是一个意思，区别在于 call 的第二个参数可以是任意类型，而apply的第二个参数必须是数组，也可以是arguments
 <h1></h1>
