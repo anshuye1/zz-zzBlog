@@ -11,9 +11,7 @@ zz@zz的博客
   猫成精了，想打怪兽<br>
   奥特曼.打小怪兽.call(猫，小怪兽)<br>
   就这样记住了。<br>
-作者：寇云
-链接：https://www.zhihu.com/question/20289071/answer/258643285
-来源：知乎
+
 <br>
 
 <div>
@@ -43,4 +41,7 @@ zz@zz的博客
   //animal.showName.apply(cat,[]); 
   
 </div>
-call和apply，这两个方法基本上是一个意思，区别在于 call 的第二个参数可以是任意类型，而apply的第二个参数必须是数组，也可以是arguments
+call和apply，这两个方法基本上是一个意思，区别在于 call 的第二个参数可以是任意类型，而apply的第二个参数必须是数组，也可以是arguments<br>
+作者：寇云
+链接：https://www.zhihu.com/question/20289071/answer/258643285
+来源：知乎
